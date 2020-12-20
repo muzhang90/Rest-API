@@ -1,0 +1,11 @@
+Value Required interface (\S*)
+Value InputbitRate (\d*)
+Value InputPacketRate (\d*)
+Value OutputbitRate (\d*)
+Value OutputPacketRate (\d*)
+
+
+Start
+  ^Physical interface:\s${interface},.*
+  ^\s*Input rate\s*:\s${InputbitRate}\s*bps\s\(${InputPacketRate}\s.*
+  ^\s*Output rate\s*:\s${OutputbitRate}\s*bps\s\(${OutputPacketRate}\s.* -> Record
